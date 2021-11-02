@@ -1,0 +1,38 @@
+.task_item {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.3em;
+    padding: 5px;
+    transition: all .5s;
+}
+
+.task_item:hover {
+    background: #B1C3B8;
+}
+
+.task_item:hover .handle_edit,
+.task_item:hover .handle_delete {
+    color: #000;
+}
+
+.task_handles {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.handle_edit,
+.handle_delete {
+    cursor: pointer;
+    transition: all .5s;
+}
+
+.handle_edit {
+    color: #659457;
+}
+
+.handle_delete {
+    color: #E5B5A5;
+}
