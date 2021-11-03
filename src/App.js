@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import { FaPlus } from 'react-icons/fa';
 
 import './App.css';
-import Task from './components/Task';
+import Task from './components/Task/index';
+import Form from './components/Form/index';
 
 export default class App extends Component {
     state = { 
@@ -65,21 +66,18 @@ export default class App extends Component {
         return (
             <main className="main_container">
                 <h1 className="main_title">Tasks List</h1>
-                <form onSubmit={this.handleSubmit} className="form" action="#">
-                    <input onInput={this.handleInput} type="text" className="task_input" value={this.state.newTask} />
-                    <button type="submit" className="submit_button"><FaPlus /></button>
-                </form>
-                <ul className="task_list">
-                    {this.state.tasks.map((task, index) => {
-                        return (<Task
-                            key = {index} 
-                            task = {task}
-                            handleEdit = {this.handleEdit}
-                            handleDelete = {this.handleDelete}
-                            index = {index}  
-                        />);
-                    })}
-                </ul>
+                
+                <Form 
+                    handleInput = {this.handleInput}
+                    handleSubmit = {this.handleSubmit}
+                    newTask = {this.state.newTask}
+                />
+
+                <Task 
+                    tasks = {this.state.tasks}
+                    handleEdit = {this.handleEdit}
+                    handleDelete = {this.handleDelete}
+                />
             </main>
         );
     }

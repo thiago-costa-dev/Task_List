@@ -8,6 +8,14 @@
     transition: all .5s;
 }
 
+.task_list {
+    list-style: none;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 .task_item:hover {
     background: #B1C3B8;
 }

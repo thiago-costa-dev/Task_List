@@ -24,36 +24,3 @@ body {
     border-bottom: 1px solid lightgray;
 }
 
-.form {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.task_input {
-    width: 80%;
-    height: 40px;
-    font-size: 1em;
-    padding-left: 10px;
-    border: 1px solid #B1C3B8;
-}
-
-.submit_button {
-    width: 40px;
-    height: 40px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
-    cursor: pointer;
-    background: #B1C3B8;
-}
-
-.task_list {
-    list-style: none;
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
